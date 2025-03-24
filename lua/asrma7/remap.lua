@@ -146,6 +146,3 @@ end, { noremap = true, silent = true })
 
 -- colorscheme picker
 vim.keymap.set("n", "<C-n>", ":Telescope colorscheme<CR>")
-
--- Dismiss Noice notfications
-vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>")
