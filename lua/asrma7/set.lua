@@ -39,3 +39,5 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 vim.opt.cursorline = true
+
+vim.opt.conceallevel = 1
