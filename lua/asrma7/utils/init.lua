@@ -30,4 +30,11 @@ function utils.fix_telescope_parens_win()
 	end
 end
 
+-- capitalize first letter of each word
+function utils.capitalize_words()
+	vim.cmd([[
+        s/\<\(\w\)\(\w*\)\>/\u\1\2/g
+    ]])
+end
+
 return utils

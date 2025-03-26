@@ -1,11 +1,7 @@
 return {
-	"epwalsh/obsidian.nvim",
+	"obsidian-nvim/obsidian.nvim",
 	version = "*",
-	lazy = true,
-	event = {
-		"BufReadPre " .. vim.fn.expand("~/obsidian-vault") .. "/*.md",
-		"BufNewFile " .. vim.fn.expand("~/obsidian-vault") .. "/*.md",
-	},
+	lazy = false,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
@@ -50,6 +46,22 @@ return {
 					end,
 					opts = { buffer = true, expr = true },
 				},
+				["<leader>on"] = {
+					action = function()
+						vim.cmd("ObsidianTemplate Notes")
+					end,
+				},
+				["<leader>os"] = {
+					action = function()
+						vim.cmd("ObsidianQuickSwitch")
+					end,
+				},
+				-- format title in the note
+				["<leader>of"] = {
+					action = function()
+						vim.cmd(":s/\\(# \\)[^_]*_/\\1/ | s/-/ /g | lua require('asrma7.utils').capitalize_words()")
+					end,
+				},
 			},
 
 			new_notes_location = "notes_subdir",
@@ -65,7 +77,7 @@ return {
 						suffix = suffix .. string.char(math.random(65, 90))
 					end
 				end
-				return tostring(os.time()) .. "-" .. suffix
+				return tostring(os.date("%Y-%m-%d")) .. "_" .. suffix
 			end,
 
 			---@param spec { id: string, dir: obsidian.Path, title: string|? }
@@ -76,6 +88,8 @@ return {
 			end,
 
 			preferred_link_style = "wiki",
+
+			disable_frontmatter = true,
 
 			templates = {
 				folder = "999-Templates",
@@ -165,7 +179,7 @@ return {
 			},
 
 			attachments = {
-				img_folder = "001-Assets",
+				img_folder = "998-Assets",
 
 				---@return string
 				img_name_func = function()
