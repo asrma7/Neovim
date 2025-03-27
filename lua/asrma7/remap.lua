@@ -20,15 +20,21 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- Paste in visual mode, but do not overwrite the unnamed register
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("v", "<leader>p", [["_dP]])
+
+-- Paste in normal mode from the system clipboard
+vim.keymap.set("n", "<leader>p", [["+p]])
 
 -- Yank text into the system clipboard in normal and visual modes
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
--- Yank the current line into the system clipboard in normal mode
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+-- Yank text until the end of the line into the system clipboard in normal mode
+vim.keymap.set("n", "<leader>Y", [["+y$]])
 
 -- Delete text without affecting the unnamed register in normal and visual modes
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+
+-- Delete text until the end of the line without affecting the unnamed register in normal mode
+vim.keymap.set({ "n", "v" }, "<leader>D", [["_D]])
 
 -- Map <C-c> to <Esc> in insert mode (alternative way to exit insert mode)
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -146,3 +152,6 @@ end, { noremap = true, silent = true })
 
 -- colorscheme picker
 vim.keymap.set("n", "<C-n>", ":Telescope colorscheme<CR>")
+
+-- obsidian dailies
+vim.keymap.set("n", "<leader>od", ":ObsidianDailies<CR>")
