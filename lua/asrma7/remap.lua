@@ -108,7 +108,7 @@ vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
 -- Format the current buffer
-vim.keymap.set({ "n", "i" }, "<C-f>", function()
+vim.keymap.set({ "n", "i" }, "<c-i>", function()
 	require("conform").format({ async = true, lsp_fallback = true })
 end, { noremap = true, silent = true })
 

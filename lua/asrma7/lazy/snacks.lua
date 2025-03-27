@@ -151,6 +151,13 @@ return {
 				desc = "Rename File",
 			},
 			{
+				"<c-_>",
+				function()
+					Snacks.terminal()
+				end,
+				desc = "Toggle Terminal",
+			},
+			{
 				"<c-/>",
 				function()
 					Snacks.terminal()
