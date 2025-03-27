@@ -42,7 +42,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 -- Disable the Q key in normal mode (often used to avoid accidental command recording)
 vim.keymap.set("n", "Q", "<nop>")
 -- Open a new tmux window running a sessionizer script with <C-f> in normal mode
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>!tmux neww tmux-sessionizer<CR>")
 
 -- Move to the next quickfix item and center the cursor vertically with <C-;> in normal mode
 vim.keymap.set("n", "<C-;>", "<cmd>cnext<CR>zz")
