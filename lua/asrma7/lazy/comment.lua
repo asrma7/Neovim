@@ -1,3 +1,4 @@
 return {
-	"numToStr/Comment.nvim",
+	"JoosepAlviste/nvim-ts-context-commentstring",
+	dependencies = { "numToStr/Comment.nvim" },
 }

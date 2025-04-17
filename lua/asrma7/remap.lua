@@ -23,7 +23,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("v", "<leader>p", [["_dP]])
 
 -- Paste in normal mode from the system clipboard
-vim.keymap.set("n", "<leader>p", [["+p]])
+vim.keymap.set("n", "<leader>p", [["+P]])
 
 -- Yank text into the system clipboard in normal and visual modes
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
