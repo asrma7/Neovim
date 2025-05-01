@@ -47,6 +47,12 @@ return {
 						{ icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
 						{
 							icon = "󰠮 ",
+							key = "d",
+							desc = "Zoxide",
+							action = ":Telescope zoxide list",
+						},
+						{
+							icon = "󰠮 ",
 							key = "o",
 							desc = "Notes",
 							action = ":ObsidianQuickSwitch",
