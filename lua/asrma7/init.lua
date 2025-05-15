@@ -31,7 +31,7 @@ autocmd({ "BufWritePre" }, {
 	command = [[%s/\s\+$//e]],
 })
 
-vim.cmd("colorscheme base16-rose-pine")
+vim.cmd("colorscheme tokyonight")
 
 utils.fix_telescope_parens_win()
 
