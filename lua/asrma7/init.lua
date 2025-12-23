@@ -31,6 +31,13 @@ autocmd({ "BufWritePre" }, {
 	command = [[%s/\s\+$//e]],
 })
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+	pattern = { "*.x", "*.xm", "*.mm" },
+	callback = function()
+		vim.bo.filetype = "objc"
+	end,
+})
+
 vim.cmd("colorscheme tokyonight")
 
 utils.fix_telescope_parens_win()
