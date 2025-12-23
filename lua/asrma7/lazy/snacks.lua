@@ -52,12 +52,6 @@ return {
                             action = ":Telescope zoxide list",
                         },
                         {
-                            icon = "󰠮 ",
-                            key = "o",
-                            desc = "Notes",
-                            action = ":Obsidian quick_switch",
-                        },
-                        {
                             icon = " ",
                             key = "g",
                             desc = "Find Text",
