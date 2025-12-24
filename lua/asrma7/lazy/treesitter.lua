@@ -6,11 +6,13 @@ return {
 		if require("asrma7.utils").get_os() == "windows" then
 			require("nvim-treesitter.install").compilers = { "zig" }
 		end
-		require("nvim-treesitter.configs").setup({
+		require("nvim-treesitter").setup({
 			ensure_installed = {
 				"vimdoc",
 				"javascript",
 				"typescript",
+				"regex",
+				"bash",
 				"lua",
 				"go",
 				"bash",

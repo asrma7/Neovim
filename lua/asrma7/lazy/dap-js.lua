@@ -4,7 +4,7 @@ local vscode_adapters = { "node", "chrome" }
 
 return {
 	"microsoft/vscode-js-debug",
-	build = "npm ci --loglevel=error && npm run compile -- dapDebugServer",
+	build = "npm ci --loglevel=error; npm run compile -- dapDebugServer",
 	config = function()
 		local dap = require("dap")
 		local dap_vscode = require("dap.ext.vscode")
