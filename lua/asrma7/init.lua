@@ -41,5 +41,3 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 vim.cmd("colorscheme tokyonight")
 
 utils.fix_telescope_parens_win()
-
-utils.color_overrides.setup_colorscheme_overrides()
